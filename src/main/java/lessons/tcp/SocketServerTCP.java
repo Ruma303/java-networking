@@ -33,7 +33,7 @@ public class SocketServerTCP {
        ServerSocket server = null;
 
        try {
-        System.out.println("Server in ascolto sulla porta " + port);
+        System.out.println("ServerTCP in ascolto sulla porta " + port);
         server = new ServerSocket(port);
         // accetta le connessioni in un ciclo infinito
        while (true) {

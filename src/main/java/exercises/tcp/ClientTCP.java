@@ -1,13 +1,13 @@
-package exercises.messager;
+package exercises.tcp;
 
 import java.io.*;
 import java.net.*;
 import java.util.Scanner;
 
-public class Client {
+public class ClientTCP {
 
     public static void main(String[] args) {
-        System.out.println("Client avviato...");
+        System.out.println("ClientTCP avviato...");
 
         try (
                 Socket socket = new Socket("localhost", 12345);
@@ -16,7 +16,7 @@ public class Client {
                 Scanner scanner = new Scanner(System.in)
         ) {
             while (true) {
-                System.out.print("Client: ");
+                System.out.print("ClientTCP: ");
                 String message = scanner.nextLine();
 
                 writer.write(message);
@@ -30,7 +30,7 @@ public class Client {
 
                 String response = reader.readLine();
                 if (response == null) {
-                    System.out.println("Server disconnesso.");
+                    System.out.println("ServerTCP disconnesso.");
                     break;
                 }
 
